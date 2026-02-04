@@ -6,7 +6,7 @@ st.sidebar.title("Machine Learning")
 st.sidebar.success("Dibuat Oleh Natasya Destiana Lestari")
 
 st.title("Regresi Penjualan Tomat")
-st.markdown("Aplikasi Machine Learning regression untuk menghitung total penjualan tomat berdasarkan fitur Harga, hari, Cuaca, dan Promo")
+st.markdown("Aplikasi Machine Learning regression untuk menghitung total penjualan tomat berdasarkan fitur `Harga, hari, Cuaca, dan Promo`")
 
 model_random = joblib.load("model_random.joblib")
 
@@ -20,4 +20,5 @@ if st.button("Prediksi"):
                          columns=["Harga", "Hari", "Cuaca", "Promo"])
 	prediksi = model_random.predict(data_baru)[0]
 	st.success(f"Model memprediksi total penjualan {prediksi:.0f}")
+
 	st.balloons()

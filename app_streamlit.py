@@ -5,7 +5,12 @@ import streamlit as st
 st.sidebar.title("Machine Learning")
 st.sidebar.success("Dibuat Oleh Natasya Destiana Lestari")
 
-st.title("Regresi Penjualan Tomat")
+st.set_page_config(
+	page_title = "Regression Penjualan Tomat",
+	page_icon = ":tomato:"
+) 
+
+st.title(":tomato: Regresi Penjualan Tomat")
 st.markdown("Aplikasi Machine Learning regression untuk menghitung total penjualan tomat berdasarkan fitur `Harga, hari, Cuaca, dan Promo`")
 
 model_random = joblib.load("model_random.joblib")
@@ -22,3 +27,4 @@ if st.button("Prediksi"):
 	st.success(f"Model memprediksi total penjualan {prediksi:.0f}")
 
 	st.balloons()
+
